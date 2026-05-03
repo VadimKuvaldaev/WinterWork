@@ -38,5 +38,15 @@ namespace ComputerPartsShop
                 MessageBox.Show("Неверный логин или пароль!");
             }
         }
+
+        private void btnGoToRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            RegisterForm regForm = new RegisterForm();
+            regForm.ShowDialog();
+
+            this.Show();
+        }
     }
 }

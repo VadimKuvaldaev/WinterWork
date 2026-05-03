@@ -54,3 +54,5 @@ C:\Users\zhesmik\source\WinterWork\ComputerPartsShop\ComputerPartsShop\bin\Debug
 C:\Users\zhesmik\source\WinterWork\ComputerPartsShop\ComputerPartsShop\obj\Debug\Computer.06CE246B.Up2Date
 C:\Users\zhesmik\source\WinterWork\ComputerPartsShop\ComputerPartsShop\obj\Debug\ComputerPartsShop.exe
 C:\Users\zhesmik\source\WinterWork\ComputerPartsShop\ComputerPartsShop\obj\Debug\ComputerPartsShop.pdb
+C:\Users\zhesmik\source\WinterWork\ComputerPartsShop\ComputerPartsShop\obj\Debug\ComputerPartsShop.exe.config
+C:\Users\zhesmik\source\WinterWork\ComputerPartsShop\ComputerPartsShop\obj\Debug\ComputerPartsShop.RegisterForm.resources

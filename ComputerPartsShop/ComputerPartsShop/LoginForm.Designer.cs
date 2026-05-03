@@ -35,13 +35,15 @@ namespace ComputerPartsShop
             this.tbLogin = new System.Windows.Forms.TextBox();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnGoToRegister = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblLogin.Location = new System.Drawing.Point(19, 41);
+            this.lblLogin.Location = new System.Drawing.Point(25, 57);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(65, 21);
             this.lblLogin.TabIndex = 0;
@@ -51,7 +53,8 @@ namespace ComputerPartsShop
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblPassword.Location = new System.Drawing.Point(19, 108);
+            this.lblPassword.Location = new System.Drawing.Point(23, 129);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(73, 21);
             this.lblPassword.TabIndex = 1;
@@ -60,17 +63,19 @@ namespace ComputerPartsShop
             // tbLogin
             // 
             this.tbLogin.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbLogin.Location = new System.Drawing.Point(23, 65);
+            this.tbLogin.Location = new System.Drawing.Point(31, 87);
+            this.tbLogin.Margin = new System.Windows.Forms.Padding(4);
             this.tbLogin.Name = "tbLogin";
-            this.tbLogin.Size = new System.Drawing.Size(290, 29);
+            this.tbLogin.Size = new System.Drawing.Size(385, 29);
             this.tbLogin.TabIndex = 2;
             // 
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbPassword.Location = new System.Drawing.Point(23, 132);
+            this.tbPassword.Location = new System.Drawing.Point(29, 154);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(290, 29);
+            this.tbPassword.Size = new System.Drawing.Size(385, 29);
             this.tbPassword.TabIndex = 3;
             this.tbPassword.UseSystemPasswordChar = true;
             // 
@@ -79,24 +84,41 @@ namespace ComputerPartsShop
             this.btnLogin.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnLogin.Location = new System.Drawing.Point(63, 211);
+            this.btnLogin.Location = new System.Drawing.Point(230, 261);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(210, 38);
+            this.btnLogin.Size = new System.Drawing.Size(202, 47);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Войти";
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
+            // btnGoToRegister
+            // 
+            this.btnGoToRegister.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnGoToRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoToRegister.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnGoToRegister.Location = new System.Drawing.Point(13, 261);
+            this.btnGoToRegister.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGoToRegister.Name = "btnGoToRegister";
+            this.btnGoToRegister.Size = new System.Drawing.Size(194, 47);
+            this.btnGoToRegister.TabIndex = 5;
+            this.btnGoToRegister.Text = "Зарегистрироваться";
+            this.btnGoToRegister.UseVisualStyleBackColor = false;
+            this.btnGoToRegister.Click += new System.EventHandler(this.btnGoToRegister_Click);
+            // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 261);
+            this.ClientSize = new System.Drawing.Size(445, 321);
+            this.Controls.Add(this.btnGoToRegister);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbLogin);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";
@@ -114,5 +136,6 @@ namespace ComputerPartsShop
         private TextBox tbLogin;
         private TextBox tbPassword;
         private Button btnLogin;
+        private Button btnGoToRegister;
     }
 }

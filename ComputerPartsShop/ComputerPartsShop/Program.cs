@@ -16,7 +16,13 @@ namespace ComputerPartsShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            LoginForm login = new LoginForm();
+
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new MainForm(login.AuthorizedUser));
+            }
         }
     }
 }
