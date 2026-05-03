@@ -106,11 +106,13 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Date\Database.cs" />
-    <Compile Include="Date\PgLoader.cs" />
     <Compile Include="Date\WarehouseManager.cs" />
+    <Compile Include="Model\Cart.cs" />
+    <Compile Include="Model\CartItem.cs" />
     <Compile Include="Model\ProductItem.cs" />
     <Compile Include="Model\Role.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Presenter\CartPresenter.cs" />
     <Compile Include="Presenter\UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

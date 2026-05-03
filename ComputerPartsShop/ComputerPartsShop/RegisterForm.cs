@@ -1,4 +1,5 @@
-﻿using ComputerPartsShopLibrary.Presenter;
+﻿using ComputerPartsShopLibrary.Model;
+using ComputerPartsShopLibrary.Presenter;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,59 +14,48 @@ namespace ComputerPartsShop
 {
     public partial class RegisterForm : Form
     {
-        public RegisterForm()
+        private UserManager _userManager;
+
+        public RegisterForm(UserManager userManager)
         {
             InitializeComponent();
+            _userManager = userManager;
+
+            // Настройка выбора ролей согласно Role (image_180c3f.png)
+            NewRoleComboBox.Items.Add(Role.Admin);
+            NewRoleComboBox.Items.Add(Role.Seller);
+            NewRoleComboBox.SelectedIndex = 1; // По умолчанию Продавец
+
         }
-        private void CreateButton_Click(object sender, EventArgs e)
+
+        private void CreateButton_Click_1(object sender, EventArgs e)
         {
-            // 1. Проверка на пустые поля
-            if (string.IsNullOrWhiteSpace(tbNewLogin.Text) || string.IsNullOrWhiteSpace(NewPasswordTextBox.Text))
+            // 1. Собираем данные из интерфейса
+            string username = NewLoginTextBox.Text.Trim();
+            string password = NewPasswordTextBox.Text.Trim();
+
+            // Пытаемся распарсить роль из ComboBox (предположим, у тебя там Enum Role)
+            if (!Enum.TryParse(NewRoleComboBox.SelectedItem.ToString(), out Role selectedRole))
             {
-                MessageBox.Show("Заполните все поля"); 
-        return;
+                MessageBox.Show("Пожалуйста, выберите корректную роль.");
+                return;
             }
 
-            // 2. Проверка выбора роли
-            if (cbNewRole.SelectedItem == null)
-            {
-                MessageBox.Show("Выберите роль пользователя"); 
-        return;
-            }
+            // 2. Создаем объект User через твой конструктор
+            // Передаем 0 для id, так как PostgreSQL (SERIAL) сам назначит индекс
+            User newUser = new User(0, username, password, selectedRole);
 
-            // Обращаемся к менеджеру пользователей (как в твоей диаграмме классов)[cite: 1]
-            bool isRegistered = userManager.Register(
-                tbNewLogin.Text,
-                tbNewPassword.Text,
-                cbNewRole.SelectedItem.ToString()
-            );
-
-            if (isRegistered)
+            // 3. Отправляем на сохранение
+            if (_userManager.Register(newUser))
             {
-                MessageBox.Show("Пользователь успешно зарегистрирован"); 
-        this.Close();
+                MessageBox.Show("Регистрация прошла успешно!");
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             else
             {
-                // Ошибка: логин уже занят[cite: 1]
-                MessageBox.Show("Пользователь с таким логином уже существует"); 
-            }
-            UserManager manager = new UserManager();
-            bool isSuccess = manager.Register(tbNewLogin.Text, tbNewPassword.Text, cbNewRole.SelectedItem.ToString());
-
-            if (isSuccess)
-            {
-                MessageBox.Show("Пользователь успешно зарегистрирован"); 
-        
-        
-                 this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Пользователь с таким логином уже существует"); 
+                MessageBox.Show("Не удалось зарегистрировать пользователя. Возможно, логин занят.");
             }
         }
-
-       
     }
 }

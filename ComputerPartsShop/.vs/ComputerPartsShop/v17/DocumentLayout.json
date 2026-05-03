@@ -1,0 +1,385 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshoplibrary\\date\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|solutionrelative:computerpartsshoplibrary\\date\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|c:\\users\\zhesmik\\source\\winterwork\\computerpartsshop\\computerpartsshop\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|c:\\users\\zhesmik\\source\\winterwork\\computerpartsshop\\computerpartsshop\\addproductform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\addproductform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|c:\\users\\zhesmik\\source\\winterwork\\computerpartsshop\\computerpartsshop\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshop\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshoplibrary\\model\\productitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|solutionrelative:computerpartsshoplibrary\\model\\productitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshoplibrary\\model\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|solutionrelative:computerpartsshoplibrary\\model\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshoplibrary\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|solutionrelative:computerpartsshoplibrary\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshoplibrary\\presenter\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|solutionrelative:computerpartsshoplibrary\\presenter\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshoplibrary\\presenter\\cartpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|solutionrelative:computerpartsshoplibrary\\presenter\\cartpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshoplibrary\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|solutionrelative:computerpartsshoplibrary\\model\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshop\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshop\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshop\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshop\\registerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\registerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshoplibrary\\date\\warehousemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{657B54CC-6DCD-43E1-AECF-8A7B620F1054}|ComputerPartsShopLibrary\\ComputerPartsShopLibrary.csproj|solutionrelative:computerpartsshoplibrary\\date\\warehousemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|c:\\users\\zhesmik\\source\\winterwork\\computerpartsshop\\computerpartsshop\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\computerpartsshop\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A12182B-8450-49B5-B973-9847CD50C56B}|ComputerPartsShop\\ComputerPartsShop.csproj|solutionrelative:computerpartsshop\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddProductForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\WinterWork\\ComputerPartsShop\\ComputerPartsShop\\AddProductForm.Designer.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\AddProductForm.Designer.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\WinterWork\\ComputerPartsShop\\ComputerPartsShop\\AddProductForm.Designer.cs",
+              "RelativeToolTip": "ComputerPartsShop\\AddProductForm.Designer.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAiwHIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T15:29:55.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddProductForm.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\AddProductForm.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\AddProductForm.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\AddProductForm.cs",
+              "RelativeToolTip": "ComputerPartsShop\\AddProductForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T15:17:32.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddProductForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\AddProductForm.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\AddProductForm.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\AddProductForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "ComputerPartsShop\\AddProductForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T15:08:55.379Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\MainForm.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\MainForm.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\MainForm.cs",
+              "RelativeToolTip": "ComputerPartsShop\\MainForm.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAkwK8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:27:25.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductItem.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Model\\ProductItem.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShopLibrary\\Model\\ProductItem.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Model\\ProductItem.cs",
+              "RelativeToolTip": "ComputerPartsShopLibrary\\Model\\ProductItem.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:03:20.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\LoginForm.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "ComputerPartsShop\\LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:21:57.856Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Date\\Database.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShopLibrary\\Date\\Database.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Date\\Database.cs",
+              "RelativeToolTip": "ComputerPartsShopLibrary\\Date\\Database.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:30:53.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\MainForm.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\MainForm.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "ComputerPartsShop\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:22:00.771Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CartPresenter.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Presenter\\CartPresenter.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShopLibrary\\Presenter\\CartPresenter.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Presenter\\CartPresenter.cs",
+              "RelativeToolTip": "ComputerPartsShopLibrary\\Presenter\\CartPresenter.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAtwCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:29:34.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Model\\Cart.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShopLibrary\\Model\\Cart.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Model\\Cart.cs",
+              "RelativeToolTip": "ComputerPartsShopLibrary\\Model\\Cart.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:32:53.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Model\\CartItem.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShopLibrary\\Model\\CartItem.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Model\\CartItem.cs",
+              "RelativeToolTip": "ComputerPartsShopLibrary\\Model\\CartItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:47:59.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "RegisterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\RegisterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "ComputerPartsShop\\RegisterForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:08:31.771Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RegisterForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\RegisterForm.Designer.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\RegisterForm.Designer.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\RegisterForm.Designer.cs",
+              "RelativeToolTip": "ComputerPartsShop\\RegisterForm.Designer.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwDIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:09:40.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Presenter\\UserManager.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShopLibrary\\Presenter\\UserManager.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Presenter\\UserManager.cs",
+              "RelativeToolTip": "ComputerPartsShopLibrary\\Presenter\\UserManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:30:06.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Model\\User.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShopLibrary\\Model\\User.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Model\\User.cs",
+              "RelativeToolTip": "ComputerPartsShopLibrary\\Model\\User.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwBkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:52:40.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\Program.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\Program.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\Program.cs",
+              "RelativeToolTip": "ComputerPartsShop\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:23:43.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\LoginForm.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\LoginForm.cs",
+              "RelativeToolTip": "ComputerPartsShop\\LoginForm.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:04:17.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "WarehouseManager.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Date\\WarehouseManager.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShopLibrary\\Date\\WarehouseManager.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShopLibrary\\Date\\WarehouseManager.cs",
+              "RelativeToolTip": "ComputerPartsShopLibrary\\Date\\WarehouseManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T11:30:33.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RegisterForm.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\RegisterForm.cs",
+              "RelativeToolTip": "ComputerPartsShop\\RegisterForm.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwBwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:08:33.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\MainForm.Designer.cs",
+              "RelativeToolTip": "ComputerPartsShop\\MainForm.Designer.cs",
+              "ViewState": "AgIAAA4CAAAAAAAAAAAAADkCAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:19:14.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "ComputerPartsShop\\LoginForm.Designer.cs",
+              "ToolTip": "C:\\Users\\zhesmik\\source\\winterwork\\ComputerPartsShop\\ComputerPartsShop\\LoginForm.Designer.cs",
+              "RelativeToolTip": "ComputerPartsShop\\LoginForm.Designer.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAiwFwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-03T12:07:02.667Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

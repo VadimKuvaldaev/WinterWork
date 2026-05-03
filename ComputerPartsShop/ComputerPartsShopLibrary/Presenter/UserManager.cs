@@ -1,4 +1,5 @@
-﻿using ComputerPartsShopLibrary.Model;
+﻿using ComputerPartsShopLibrary.Date;
+using ComputerPartsShopLibrary.Model;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -11,48 +12,57 @@ namespace ComputerPartsShopLibrary.Presenter
 {
     public class UserManager
     {
-        private string connectionString = "Host=localhost;Username=PostgreSQL 16;Password=123456;Database=DBComputerPartsShop";
+        // Поле для работы с базой данных
+        private readonly Database _database;
 
-        // Метод для входа в систему
+        // Свойство для хранения авторизованного пользователя (сессия)
+        public User currentUser { get; private set; }
+
+        public UserManager(Database database)
+        {
+            // Получаем экземпляр базы данных (обычно передается из Program.cs)
+            _database = database;
+        }
+
+        /// <summary>
+        /// Авторизация пользователя
+        /// </summary>
         public User Login(string login, string password)
         {
-            try
+            // Ищем пользователя в БД по логину
+            User user = _database.GetUserByLogin(login);
+
+            // Проверяем существование и совпадение пароля (используем нижний регистр свойств)
+            if (user != null && user.Password == password)
             {
-                using (var con = new NpgsqlConnection(connectionString))
-                {
-                    con.Open();
-                    // Ищем пользователя по логину и паролю
-                    string sql = "SELECT id, login, password, role FROM users WHERE login = @l AND password = @p";
-
-                    using (var cmd = new NpgsqlCommand(sql, con))
-                    {
-                        cmd.Parameters.AddWithValue("@l", login);
-                        cmd.Parameters.AddWithValue("@p", password);
-
-                        using (var reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                // Если нашли, создаем объект User из твоей модели
-                                int id = reader.GetInt32(0);
-                                string userLogin = reader.GetString(1);
-                                string userPass = reader.GetString(2);
-
-                                // Парсим роль из строки (Admin/Seller) в Enum Role
-                                Role userRole = (Role)Enum.Parse(typeof(Role), reader.GetString(3));
-
-                                return new User(id, userLogin, userPass, userRole);
-                            }
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ошибка при авторизации: " + ex.Message);
+                currentUser = user; // Сохраняем пользователя в текущую сессию
+                return user;
             }
 
-            return null; // Если не нашли или ошибка
+            return null; // Если данные неверны
+        }
+
+        /// <summary>
+        /// Регистрация нового пользователя
+        /// </summary>
+        public bool Register(User newUser)
+        {
+            // 1. Проверяем, не занят ли логин
+            if (_database.CheckUserExists(newUser.Login))
+            {
+                return false; // Логин уже существует
+            }
+
+            // 2. Пытаемся сохранить в базу данных
+            return _database.SaveUser(newUser);
+        }
+
+        /// <summary>
+        /// Выход из системы
+        /// </summary>
+        public void Logout()
+        {
+            currentUser = null;
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ComputerPartsShopLibrary.Date;
+using ComputerPartsShopLibrary.Presenter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,13 +17,16 @@ namespace ComputerPartsShop
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
 
-            LoginForm login = new LoginForm();
+            Database db = new Database();
+            UserManager userManager = new UserManager(db);
 
-            if (login.ShowDialog() == DialogResult.OK)
+            LoginForm loginForm = new LoginForm(userManager);
+
+            if (loginForm.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new MainForm(login.AuthorizedUser));
+                // Если логин прошел, открываем главную форму
+                Application.Run(new MainForm(userManager));
             }
         }
     }

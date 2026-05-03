@@ -1,40 +1,71 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Xml.Linq;
 
 namespace ComputerPartsShopLibrary.Model
 {
-    public class User
+    public class User : INotifyPropertyChanged
     {
         private int id_;
         private string login_;
-        private string passeord_;
+        private string password_;
         private Role role_;
 
         public User(int id, string login, string password, Role role)
         {
             id_ = id;
             login_ = login;
-            passeord_ = password;
+            password_ = password;
             role_ = role;
         }
-        public int Id()
+        public int Id
         {
-            return id_;
+            get { return id_; }
+            set
+            {
+                id_ = value;
+                OnPropertyChanged("id");
+            }
         }
-        public string Login()
+        public string Login
         {
-            return login_;
+            get { return login_; }
+            set
+            {
+                login_ = value;
+                OnPropertyChanged("login");
+            }
         }
-        public string Passeord()
+        public string Password
         {
-            return passeord_;
+            get { return password_; }
+            set
+            {
+                password_ = value;
+                OnPropertyChanged("password");
+            }
         }
-        public Role UserRole()
+        public Role UserRole
         {
-            return role_;
+            get { return role_; }
+            set
+            {
+                role_ = value;
+                OnPropertyChanged("role");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        public void OnPropertyChanged([CallerMemberName] string prop = "")
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
     }
 }

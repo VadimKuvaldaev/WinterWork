@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CreateBotton = new System.Windows.Forms.Button();
-            this.tbNewPassword = new System.Windows.Forms.TextBox();
-            this.tbNewLogin = new System.Windows.Forms.TextBox();
+            this.CreateButton = new System.Windows.Forms.Button();
+            this.NewPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.NewLoginTextBox = new System.Windows.Forms.TextBox();
             this.lblNewPassword = new System.Windows.Forms.Label();
             this.lblNewLogin = new System.Windows.Forms.Label();
-            this.cbNewRole = new System.Windows.Forms.ComboBox();
+            this.NewRoleComboBox = new System.Windows.Forms.ComboBox();
             this.lblNewRole = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // CreateBotton
+            // CreateButton
             // 
-            this.CreateBotton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.CreateBotton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CreateBotton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CreateBotton.Location = new System.Drawing.Point(91, 261);
-            this.CreateBotton.Margin = new System.Windows.Forms.Padding(4);
-            this.CreateBotton.Name = "CreateBotton";
-            this.CreateBotton.Size = new System.Drawing.Size(280, 47);
-            this.CreateBotton.TabIndex = 9;
-            this.CreateBotton.Text = "Зарегистрироваться";
-            this.CreateBotton.UseVisualStyleBackColor = false;
+            this.CreateButton.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.CreateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CreateButton.Location = new System.Drawing.Point(91, 261);
+            this.CreateButton.Margin = new System.Windows.Forms.Padding(4);
+            this.CreateButton.Name = "CreateButton";
+            this.CreateButton.Size = new System.Drawing.Size(280, 47);
+            this.CreateButton.TabIndex = 9;
+            this.CreateButton.Text = "Зарегистрироваться";
+            this.CreateButton.UseVisualStyleBackColor = false;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click_1);
             // 
-            // tbNewPassword
+            // NewPasswordTextBox
             // 
-            this.tbNewPassword.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbNewPassword.Location = new System.Drawing.Point(31, 100);
-            this.tbNewPassword.Margin = new System.Windows.Forms.Padding(4);
-            this.tbNewPassword.Name = "tbNewPassword";
-            this.tbNewPassword.Size = new System.Drawing.Size(385, 29);
-            this.tbNewPassword.TabIndex = 8;
-            this.tbNewPassword.UseSystemPasswordChar = true;
+            this.NewPasswordTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewPasswordTextBox.Location = new System.Drawing.Point(31, 100);
+            this.NewPasswordTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.NewPasswordTextBox.Name = "NewPasswordTextBox";
+            this.NewPasswordTextBox.Size = new System.Drawing.Size(385, 29);
+            this.NewPasswordTextBox.TabIndex = 8;
+            this.NewPasswordTextBox.UseSystemPasswordChar = true;
             // 
-            // tbNewLogin
+            // NewLoginTextBox
             // 
-            this.tbNewLogin.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbNewLogin.Location = new System.Drawing.Point(31, 38);
-            this.tbNewLogin.Margin = new System.Windows.Forms.Padding(4);
-            this.tbNewLogin.Name = "tbNewLogin";
-            this.tbNewLogin.Size = new System.Drawing.Size(385, 29);
-            this.tbNewLogin.TabIndex = 7;
+            this.NewLoginTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewLoginTextBox.Location = new System.Drawing.Point(31, 38);
+            this.NewLoginTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.NewLoginTextBox.Name = "NewLoginTextBox";
+            this.NewLoginTextBox.Size = new System.Drawing.Size(385, 29);
+            this.NewLoginTextBox.TabIndex = 7;
             // 
             // lblNewPassword
             // 
@@ -91,17 +92,14 @@
             this.lblNewLogin.TabIndex = 5;
             this.lblNewLogin.Text = "Логин:";
             // 
-            // cbNewRole
+            // NewRoleComboBox
             // 
-            this.cbNewRole.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbNewRole.FormattingEnabled = true;
-            this.cbNewRole.Items.AddRange(new object[] {
-            "Admin",
-            "Seller"});
-            this.cbNewRole.Location = new System.Drawing.Point(31, 166);
-            this.cbNewRole.Name = "cbNewRole";
-            this.cbNewRole.Size = new System.Drawing.Size(385, 29);
-            this.cbNewRole.TabIndex = 10;
+            this.NewRoleComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NewRoleComboBox.FormattingEnabled = true;
+            this.NewRoleComboBox.Location = new System.Drawing.Point(31, 166);
+            this.NewRoleComboBox.Name = "NewRoleComboBox";
+            this.NewRoleComboBox.Size = new System.Drawing.Size(385, 29);
+            this.NewRoleComboBox.TabIndex = 10;
             // 
             // lblNewRole
             // 
@@ -120,16 +118,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 321);
             this.Controls.Add(this.lblNewRole);
-            this.Controls.Add(this.cbNewRole);
-            this.Controls.Add(this.CreateBotton);
-            this.Controls.Add(this.tbNewPassword);
-            this.Controls.Add(this.tbNewLogin);
+            this.Controls.Add(this.NewRoleComboBox);
+            this.Controls.Add(this.CreateButton);
+            this.Controls.Add(this.NewPasswordTextBox);
+            this.Controls.Add(this.NewLoginTextBox);
             this.Controls.Add(this.lblNewPassword);
             this.Controls.Add(this.lblNewLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -138,12 +137,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button CreateBotton;
-        private System.Windows.Forms.TextBox tbNewPassword;
-        private System.Windows.Forms.TextBox tbNewLogin;
+        private System.Windows.Forms.Button CreateButton;
+        private System.Windows.Forms.TextBox NewPasswordTextBox;
+        private System.Windows.Forms.TextBox NewLoginTextBox;
         private System.Windows.Forms.Label lblNewPassword;
         private System.Windows.Forms.Label lblNewLogin;
-        private System.Windows.Forms.ComboBox cbNewRole;
+        private System.Windows.Forms.ComboBox NewRoleComboBox;
         private System.Windows.Forms.Label lblNewRole;
     }
 }

@@ -30,7 +30,7 @@
         {
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.inventoryPage = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.DeleteProductButton = new System.Windows.Forms.Button();
             this.AddProductButton = new System.Windows.Forms.Button();
             this.FilterCategoryComboBox = new System.Windows.Forms.ComboBox();
             this.SearchNameTextBox = new System.Windows.Forms.TextBox();
@@ -45,25 +45,25 @@
             this.QuantityNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.CatalogDataGridView = new System.Windows.Forms.DataGridView();
             this.CartGroupBox = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.GenerateRepButton = new System.Windows.Forms.Button();
             this.TotalSumLabel = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.DeleteToCartButton = new System.Windows.Forms.Button();
             this.lblTotalSum = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CartDataGridView = new System.Windows.Forms.DataGridView();
             this.reportsPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ReportByDayCartesian = new LiveCharts.WinForms.CartesianChart();
+            this.ReportByDayLanel = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.ReportByEmpPic = new LiveCharts.WinForms.PieChart();
+            this.ReportByEmpLabel = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.GenerateReportButton = new System.Windows.Forms.Button();
             this.EndDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label = new System.Windows.Forms.Label();
             this.StartDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DateTimePickerLabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ReportByDayLanel = new System.Windows.Forms.Label();
-            this.ReportByDayCartesian = new LiveCharts.WinForms.CartesianChart();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.ReportByEmpLabel = new System.Windows.Forms.Label();
-            this.ReportByEmpPic = new LiveCharts.WinForms.PieChart();
             this.MainTabControl.SuspendLayout();
             this.inventoryPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductsDataGridView)).BeginInit();
@@ -76,12 +76,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.QuantityNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CatalogDataGridView)).BeginInit();
             this.CartGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CartDataGridView)).BeginInit();
             this.reportsPage.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -92,14 +92,15 @@
             this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTabControl.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainTabControl.Location = new System.Drawing.Point(0, 0);
+            this.MainTabControl.Margin = new System.Windows.Forms.Padding(4);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(1223, 612);
+            this.MainTabControl.Size = new System.Drawing.Size(1281, 753);
             this.MainTabControl.TabIndex = 0;
             // 
             // inventoryPage
             // 
-            this.inventoryPage.Controls.Add(this.button1);
+            this.inventoryPage.Controls.Add(this.DeleteProductButton);
             this.inventoryPage.Controls.Add(this.AddProductButton);
             this.inventoryPage.Controls.Add(this.FilterCategoryComboBox);
             this.inventoryPage.Controls.Add(this.SearchNameTextBox);
@@ -107,25 +108,27 @@
             this.inventoryPage.Controls.Add(this.lblSearchName);
             this.inventoryPage.Controls.Add(this.ProductsDataGridView);
             this.inventoryPage.Location = new System.Drawing.Point(4, 24);
+            this.inventoryPage.Margin = new System.Windows.Forms.Padding(4);
             this.inventoryPage.Name = "inventoryPage";
-            this.inventoryPage.Padding = new System.Windows.Forms.Padding(3);
-            this.inventoryPage.Size = new System.Drawing.Size(1215, 584);
+            this.inventoryPage.Padding = new System.Windows.Forms.Padding(4);
+            this.inventoryPage.Size = new System.Drawing.Size(1273, 725);
             this.inventoryPage.TabIndex = 0;
             this.inventoryPage.Text = "Склад";
             this.inventoryPage.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // DeleteProductButton
             // 
-            this.button1.BackColor = System.Drawing.Color.LightCoral;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(195, 546);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(167, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "- Удалить товар";
-            this.button1.UseVisualStyleBackColor = false;
+            this.DeleteProductButton.BackColor = System.Drawing.Color.LightCoral;
+            this.DeleteProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteProductButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteProductButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DeleteProductButton.Location = new System.Drawing.Point(204, 672);
+            this.DeleteProductButton.Margin = new System.Windows.Forms.Padding(4);
+            this.DeleteProductButton.Name = "DeleteProductButton";
+            this.DeleteProductButton.Size = new System.Drawing.Size(156, 39);
+            this.DeleteProductButton.TabIndex = 6;
+            this.DeleteProductButton.Text = "- Удалить товар";
+            this.DeleteProductButton.UseVisualStyleBackColor = false;
             // 
             // AddProductButton
             // 
@@ -133,35 +136,40 @@
             this.AddProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddProductButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddProductButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AddProductButton.Location = new System.Drawing.Point(22, 546);
+            this.AddProductButton.Location = new System.Drawing.Point(29, 672);
+            this.AddProductButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddProductButton.Name = "AddProductButton";
-            this.AddProductButton.Size = new System.Drawing.Size(167, 32);
+            this.AddProductButton.Size = new System.Drawing.Size(167, 39);
             this.AddProductButton.TabIndex = 5;
             this.AddProductButton.Text = "+ Добавить товар";
             this.AddProductButton.UseVisualStyleBackColor = false;
+            this.AddProductButton.Click += new System.EventHandler(this.AddProductButton_Click_1);
             // 
             // FilterCategoryComboBox
             // 
             this.FilterCategoryComboBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FilterCategoryComboBox.FormattingEnabled = true;
-            this.FilterCategoryComboBox.Location = new System.Drawing.Point(611, 6);
+            this.FilterCategoryComboBox.Location = new System.Drawing.Point(497, 7);
+            this.FilterCategoryComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.FilterCategoryComboBox.Name = "FilterCategoryComboBox";
-            this.FilterCategoryComboBox.Size = new System.Drawing.Size(302, 29);
+            this.FilterCategoryComboBox.Size = new System.Drawing.Size(297, 29);
             this.FilterCategoryComboBox.TabIndex = 4;
             // 
             // SearchNameTextBox
             // 
             this.SearchNameTextBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SearchNameTextBox.Location = new System.Drawing.Point(83, 6);
+            this.SearchNameTextBox.Location = new System.Drawing.Point(91, 7);
+            this.SearchNameTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.SearchNameTextBox.Name = "SearchNameTextBox";
-            this.SearchNameTextBox.Size = new System.Drawing.Size(302, 29);
+            this.SearchNameTextBox.Size = new System.Drawing.Size(297, 29);
             this.SearchNameTextBox.TabIndex = 3;
             // 
             // lblFilter
             // 
             this.lblFilter.AutoSize = true;
             this.lblFilter.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblFilter.Location = new System.Drawing.Point(516, 9);
+            this.lblFilter.Location = new System.Drawing.Point(398, 10);
+            this.lblFilter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.Size = new System.Drawing.Size(99, 21);
             this.lblFilter.TabIndex = 2;
@@ -171,7 +179,8 @@
             // 
             this.lblSearchName.AutoSize = true;
             this.lblSearchName.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSearchName.Location = new System.Drawing.Point(22, 9);
+            this.lblSearchName.Location = new System.Drawing.Point(29, 11);
+            this.lblSearchName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSearchName.Name = "lblSearchName";
             this.lblSearchName.Size = new System.Drawing.Size(65, 21);
             this.lblSearchName.TabIndex = 1;
@@ -180,19 +189,20 @@
             // ProductsDataGridView
             // 
             this.ProductsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductsDataGridView.Location = new System.Drawing.Point(23, 41);
+            this.ProductsDataGridView.Location = new System.Drawing.Point(31, 50);
+            this.ProductsDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.ProductsDataGridView.Name = "ProductsDataGridView";
-            this.ProductsDataGridView.Size = new System.Drawing.Size(1173, 499);
+            this.ProductsDataGridView.Size = new System.Drawing.Size(1217, 614);
             this.ProductsDataGridView.TabIndex = 0;
-            this.ProductsDataGridView.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.ProductsDataGridView_CellFormatting);
             // 
             // salesPage
             // 
             this.salesPage.Controls.Add(this.splitContainer1);
             this.salesPage.Location = new System.Drawing.Point(4, 24);
+            this.salesPage.Margin = new System.Windows.Forms.Padding(4);
             this.salesPage.Name = "salesPage";
-            this.salesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.salesPage.Size = new System.Drawing.Size(1215, 584);
+            this.salesPage.Padding = new System.Windows.Forms.Padding(4);
+            this.salesPage.Size = new System.Drawing.Size(1273, 725);
             this.salesPage.TabIndex = 1;
             this.salesPage.Text = "Продажи";
             this.salesPage.UseVisualStyleBackColor = true;
@@ -200,7 +210,8 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Location = new System.Drawing.Point(4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -210,8 +221,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.CartGroupBox);
-            this.splitContainer1.Size = new System.Drawing.Size(1209, 578);
-            this.splitContainer1.SplitterDistance = 612;
+            this.splitContainer1.Size = new System.Drawing.Size(1265, 717);
+            this.splitContainer1.SplitterDistance = 640;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 0;
             // 
             // CatalogGroupBox
@@ -221,9 +233,11 @@
             this.CatalogGroupBox.Controls.Add(this.QuantityNumericUpDown);
             this.CatalogGroupBox.Controls.Add(this.CatalogDataGridView);
             this.CatalogGroupBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CatalogGroupBox.Location = new System.Drawing.Point(5, 3);
+            this.CatalogGroupBox.Location = new System.Drawing.Point(7, 4);
+            this.CatalogGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.CatalogGroupBox.Name = "CatalogGroupBox";
-            this.CatalogGroupBox.Size = new System.Drawing.Size(604, 575);
+            this.CatalogGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.CatalogGroupBox.Size = new System.Drawing.Size(805, 708);
             this.CatalogGroupBox.TabIndex = 0;
             this.CatalogGroupBox.TabStop = false;
             this.CatalogGroupBox.Text = "Доступные товары";
@@ -234,9 +248,10 @@
             this.AddToCartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddToCartButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddToCartButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AddToCartButton.Location = new System.Drawing.Point(399, 529);
+            this.AddToCartButton.Location = new System.Drawing.Point(407, 651);
+            this.AddToCartButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddToCartButton.Name = "AddToCartButton";
-            this.AddToCartButton.Size = new System.Drawing.Size(199, 32);
+            this.AddToCartButton.Size = new System.Drawing.Size(207, 39);
             this.AddToCartButton.TabIndex = 6;
             this.AddToCartButton.Text = "+ Добавить в корзину";
             this.AddToCartButton.UseVisualStyleBackColor = false;
@@ -244,7 +259,8 @@
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Location = new System.Drawing.Point(6, 531);
+            this.lblQuantity.Location = new System.Drawing.Point(8, 660);
+            this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(109, 21);
             this.lblQuantity.TabIndex = 3;
@@ -252,9 +268,10 @@
             // 
             // QuantityNumericUpDown
             // 
-            this.QuantityNumericUpDown.Location = new System.Drawing.Point(121, 529);
+            this.QuantityNumericUpDown.Location = new System.Drawing.Point(125, 658);
+            this.QuantityNumericUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.QuantityNumericUpDown.Name = "QuantityNumericUpDown";
-            this.QuantityNumericUpDown.Size = new System.Drawing.Size(120, 29);
+            this.QuantityNumericUpDown.Size = new System.Drawing.Size(105, 29);
             this.QuantityNumericUpDown.TabIndex = 1;
             // 
             // CatalogDataGridView
@@ -263,84 +280,92 @@
             this.CatalogDataGridView.BackgroundColor = System.Drawing.SystemColors.Menu;
             this.CatalogDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CatalogDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CatalogDataGridView.Location = new System.Drawing.Point(6, 28);
+            this.CatalogDataGridView.Location = new System.Drawing.Point(8, 34);
+            this.CatalogDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.CatalogDataGridView.Name = "CatalogDataGridView";
             this.CatalogDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.CatalogDataGridView.Size = new System.Drawing.Size(592, 495);
+            this.CatalogDataGridView.Size = new System.Drawing.Size(610, 609);
             this.CatalogDataGridView.TabIndex = 0;
             // 
             // CartGroupBox
             // 
-            this.CartGroupBox.Controls.Add(this.button3);
+            this.CartGroupBox.Controls.Add(this.GenerateRepButton);
             this.CartGroupBox.Controls.Add(this.TotalSumLabel);
-            this.CartGroupBox.Controls.Add(this.button2);
+            this.CartGroupBox.Controls.Add(this.DeleteToCartButton);
             this.CartGroupBox.Controls.Add(this.lblTotalSum);
-            this.CartGroupBox.Controls.Add(this.dataGridView1);
+            this.CartGroupBox.Controls.Add(this.CartDataGridView);
             this.CartGroupBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CartGroupBox.Location = new System.Drawing.Point(-1, 3);
+            this.CartGroupBox.Location = new System.Drawing.Point(-1, 4);
+            this.CartGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.CartGroupBox.Name = "CartGroupBox";
-            this.CartGroupBox.Size = new System.Drawing.Size(599, 574);
+            this.CartGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.CartGroupBox.Size = new System.Drawing.Size(616, 706);
             this.CartGroupBox.TabIndex = 1;
             this.CartGroupBox.TabStop = false;
             this.CartGroupBox.Text = "Корзина покупателя";
             // 
-            // button3
+            // GenerateRepButton
             // 
-            this.button3.BackColor = System.Drawing.Color.SkyBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(217, 530);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(185, 32);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Сформировать чек";
-            this.button3.UseVisualStyleBackColor = false;
+            this.GenerateRepButton.BackColor = System.Drawing.Color.SkyBlue;
+            this.GenerateRepButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GenerateRepButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.GenerateRepButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.GenerateRepButton.Location = new System.Drawing.Point(245, 652);
+            this.GenerateRepButton.Margin = new System.Windows.Forms.Padding(4);
+            this.GenerateRepButton.Name = "GenerateRepButton";
+            this.GenerateRepButton.Size = new System.Drawing.Size(173, 39);
+            this.GenerateRepButton.TabIndex = 12;
+            this.GenerateRepButton.Text = "Сформировать чек";
+            this.GenerateRepButton.UseVisualStyleBackColor = false;
             // 
             // TotalSumLabel
             // 
             this.TotalSumLabel.AutoSize = true;
             this.TotalSumLabel.BackColor = System.Drawing.Color.Transparent;
             this.TotalSumLabel.ForeColor = System.Drawing.Color.DarkGreen;
-            this.TotalSumLabel.Location = new System.Drawing.Point(66, 533);
+            this.TotalSumLabel.Location = new System.Drawing.Point(79, 655);
+            this.TotalSumLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalSumLabel.Name = "TotalSumLabel";
             this.TotalSumLabel.Size = new System.Drawing.Size(58, 21);
             this.TotalSumLabel.TabIndex = 11;
             this.TotalSumLabel.Text = "0 руб.";
             // 
-            // button2
+            // DeleteToCartButton
             // 
-            this.button2.BackColor = System.Drawing.Color.LightCoral;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(408, 530);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 32);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "- Убрать из корзины";
-            this.button2.UseVisualStyleBackColor = false;
+            this.DeleteToCartButton.BackColor = System.Drawing.Color.LightCoral;
+            this.DeleteToCartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteToCartButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteToCartButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DeleteToCartButton.Location = new System.Drawing.Point(426, 651);
+            this.DeleteToCartButton.Margin = new System.Windows.Forms.Padding(4);
+            this.DeleteToCartButton.Name = "DeleteToCartButton";
+            this.DeleteToCartButton.Size = new System.Drawing.Size(185, 39);
+            this.DeleteToCartButton.TabIndex = 10;
+            this.DeleteToCartButton.Text = "- Убрать из корзины";
+            this.DeleteToCartButton.UseVisualStyleBackColor = false;
             // 
             // lblTotalSum
             // 
             this.lblTotalSum.AutoSize = true;
-            this.lblTotalSum.Location = new System.Drawing.Point(6, 532);
+            this.lblTotalSum.Location = new System.Drawing.Point(8, 655);
+            this.lblTotalSum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalSum.Name = "lblTotalSum";
             this.lblTotalSum.Size = new System.Drawing.Size(63, 21);
             this.lblTotalSum.TabIndex = 9;
             this.lblTotalSum.Text = "Итого:";
             // 
-            // dataGridView1
+            // CartDataGridView
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Menu;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 28);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(592, 496);
-            this.dataGridView1.TabIndex = 7;
+            this.CartDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.CartDataGridView.BackgroundColor = System.Drawing.SystemColors.Menu;
+            this.CartDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CartDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CartDataGridView.Location = new System.Drawing.Point(17, 48);
+            this.CartDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.CartDataGridView.Name = "CartDataGridView";
+            this.CartDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.CartDataGridView.Size = new System.Drawing.Size(599, 603);
+            this.CartDataGridView.TabIndex = 7;
             // 
             // reportsPage
             // 
@@ -348,9 +373,10 @@
             this.reportsPage.Controls.Add(this.tableLayoutPanel1);
             this.reportsPage.Controls.Add(this.panel1);
             this.reportsPage.Location = new System.Drawing.Point(4, 24);
+            this.reportsPage.Margin = new System.Windows.Forms.Padding(4);
             this.reportsPage.Name = "reportsPage";
-            this.reportsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.reportsPage.Size = new System.Drawing.Size(1215, 584);
+            this.reportsPage.Padding = new System.Windows.Forms.Padding(4);
+            this.reportsPage.Size = new System.Drawing.Size(1273, 725);
             this.reportsPage.TabIndex = 2;
             this.reportsPage.Text = "Отчетность";
             // 
@@ -362,13 +388,76 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 63);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 78);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1209, 518);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1265, 643);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.ReportByDayCartesian);
+            this.panel2.Controls.Add(this.ReportByDayLanel);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(624, 635);
+            this.panel2.TabIndex = 2;
+            // 
+            // ReportByDayCartesian
+            // 
+            this.ReportByDayCartesian.Location = new System.Drawing.Point(4, 33);
+            this.ReportByDayCartesian.Margin = new System.Windows.Forms.Padding(4);
+            this.ReportByDayCartesian.Name = "ReportByDayCartesian";
+            this.ReportByDayCartesian.Size = new System.Drawing.Size(616, 593);
+            this.ReportByDayCartesian.TabIndex = 4;
+            this.ReportByDayCartesian.Text = "cartesianChart1";
+            // 
+            // ReportByDayLanel
+            // 
+            this.ReportByDayLanel.AutoSize = true;
+            this.ReportByDayLanel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReportByDayLanel.Location = new System.Drawing.Point(4, 4);
+            this.ReportByDayLanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ReportByDayLanel.Name = "ReportByDayLanel";
+            this.ReportByDayLanel.Size = new System.Drawing.Size(220, 21);
+            this.ReportByDayLanel.TabIndex = 3;
+            this.ReportByDayLanel.Text = "Динамика выручки (руб.):";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.ReportByEmpPic);
+            this.panel3.Controls.Add(this.ReportByEmpLabel);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(636, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(625, 635);
+            this.panel3.TabIndex = 3;
+            // 
+            // ReportByEmpPic
+            // 
+            this.ReportByEmpPic.Location = new System.Drawing.Point(4, 33);
+            this.ReportByEmpPic.Margin = new System.Windows.Forms.Padding(4);
+            this.ReportByEmpPic.Name = "ReportByEmpPic";
+            this.ReportByEmpPic.Size = new System.Drawing.Size(617, 597);
+            this.ReportByEmpPic.TabIndex = 5;
+            this.ReportByEmpPic.Text = "pieChart1";
+            // 
+            // ReportByEmpLabel
+            // 
+            this.ReportByEmpLabel.AutoSize = true;
+            this.ReportByEmpLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReportByEmpLabel.Location = new System.Drawing.Point(4, 4);
+            this.ReportByEmpLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.ReportByEmpLabel.Name = "ReportByEmpLabel";
+            this.ReportByEmpLabel.Size = new System.Drawing.Size(198, 21);
+            this.ReportByEmpLabel.TabIndex = 4;
+            this.ReportByEmpLabel.Text = "Популярность товаров:";
             // 
             // panel1
             // 
@@ -378,9 +467,10 @@
             this.panel1.Controls.Add(this.StartDateTimePicker);
             this.panel1.Controls.Add(this.DateTimePickerLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1209, 60);
+            this.panel1.Size = new System.Drawing.Size(1265, 74);
             this.panel1.TabIndex = 0;
             // 
             // GenerateReportButton
@@ -389,9 +479,10 @@
             this.GenerateReportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GenerateReportButton.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GenerateReportButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.GenerateReportButton.Location = new System.Drawing.Point(1007, 15);
+            this.GenerateReportButton.Location = new System.Drawing.Point(1063, 17);
+            this.GenerateReportButton.Margin = new System.Windows.Forms.Padding(4);
             this.GenerateReportButton.Name = "GenerateReportButton";
-            this.GenerateReportButton.Size = new System.Drawing.Size(197, 32);
+            this.GenerateReportButton.Size = new System.Drawing.Size(194, 39);
             this.GenerateReportButton.TabIndex = 13;
             this.GenerateReportButton.Text = "Сформировать отчет";
             this.GenerateReportButton.UseVisualStyleBackColor = false;
@@ -399,16 +490,18 @@
             // EndDateTimePicker
             // 
             this.EndDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EndDateTimePicker.Location = new System.Drawing.Point(76, 16);
+            this.EndDateTimePicker.Location = new System.Drawing.Point(78, 20);
+            this.EndDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.EndDateTimePicker.Name = "EndDateTimePicker";
-            this.EndDateTimePicker.Size = new System.Drawing.Size(173, 29);
+            this.EndDateTimePicker.Size = new System.Drawing.Size(189, 29);
             this.EndDateTimePicker.TabIndex = 3;
             // 
             // label
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label.Location = new System.Drawing.Point(252, 21);
+            this.label.Location = new System.Drawing.Point(270, 25);
+            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(16, 21);
             this.label.TabIndex = 2;
@@ -417,84 +510,32 @@
             // StartDateTimePicker
             // 
             this.StartDateTimePicker.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StartDateTimePicker.Location = new System.Drawing.Point(271, 16);
+            this.StartDateTimePicker.Location = new System.Drawing.Point(289, 20);
+            this.StartDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
             this.StartDateTimePicker.Name = "StartDateTimePicker";
-            this.StartDateTimePicker.Size = new System.Drawing.Size(173, 29);
+            this.StartDateTimePicker.Size = new System.Drawing.Size(229, 29);
             this.StartDateTimePicker.TabIndex = 1;
             // 
             // DateTimePickerLabel
             // 
             this.DateTimePickerLabel.AutoSize = true;
             this.DateTimePickerLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DateTimePickerLabel.Location = new System.Drawing.Point(5, 19);
+            this.DateTimePickerLabel.Location = new System.Drawing.Point(7, 23);
+            this.DateTimePickerLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DateTimePickerLabel.Name = "DateTimePickerLabel";
             this.DateTimePickerLabel.Size = new System.Drawing.Size(74, 21);
             this.DateTimePickerLabel.TabIndex = 0;
             this.DateTimePickerLabel.Text = "Преиод:";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.ReportByDayCartesian);
-            this.panel2.Controls.Add(this.ReportByDayLanel);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(598, 512);
-            this.panel2.TabIndex = 2;
-            // 
-            // ReportByDayLanel
-            // 
-            this.ReportByDayLanel.AutoSize = true;
-            this.ReportByDayLanel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReportByDayLanel.Location = new System.Drawing.Point(3, 3);
-            this.ReportByDayLanel.Name = "ReportByDayLanel";
-            this.ReportByDayLanel.Size = new System.Drawing.Size(220, 21);
-            this.ReportByDayLanel.TabIndex = 3;
-            this.ReportByDayLanel.Text = "Динамика выручки (руб.):";
-            // 
-            // ReportByDayCartesian
-            // 
-            this.ReportByDayCartesian.Location = new System.Drawing.Point(3, 27);
-            this.ReportByDayCartesian.Name = "ReportByDayCartesian";
-            this.ReportByDayCartesian.Size = new System.Drawing.Size(592, 482);
-            this.ReportByDayCartesian.TabIndex = 4;
-            this.ReportByDayCartesian.Text = "cartesianChart1";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.ReportByEmpPic);
-            this.panel3.Controls.Add(this.ReportByEmpLabel);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(607, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(599, 512);
-            this.panel3.TabIndex = 3;
-            // 
-            // ReportByEmpLabel
-            // 
-            this.ReportByEmpLabel.AutoSize = true;
-            this.ReportByEmpLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ReportByEmpLabel.Location = new System.Drawing.Point(3, 3);
-            this.ReportByEmpLabel.Name = "ReportByEmpLabel";
-            this.ReportByEmpLabel.Size = new System.Drawing.Size(198, 21);
-            this.ReportByEmpLabel.TabIndex = 4;
-            this.ReportByEmpLabel.Text = "Популярность товаров:";
-            // 
-            // ReportByEmpPic
-            // 
-            this.ReportByEmpPic.Location = new System.Drawing.Point(3, 27);
-            this.ReportByEmpPic.Name = "ReportByEmpPic";
-            this.ReportByEmpPic.Size = new System.Drawing.Size(593, 485);
-            this.ReportByEmpPic.TabIndex = 5;
-            this.ReportByEmpPic.Text = "pieChart1";
-            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 612);
+            this.ClientSize = new System.Drawing.Size(1281, 753);
             this.Controls.Add(this.MainTabControl);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Магазин компьютерных комплектующих";
             this.MainTabControl.ResumeLayout(false);
             this.inventoryPage.ResumeLayout(false);
@@ -511,15 +552,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.CatalogDataGridView)).EndInit();
             this.CartGroupBox.ResumeLayout(false);
             this.CartGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CartDataGridView)).EndInit();
             this.reportsPage.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -536,7 +577,7 @@
         private System.Windows.Forms.Label lblSearchName;
         private System.Windows.Forms.ComboBox FilterCategoryComboBox;
         private System.Windows.Forms.Button AddProductButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button DeleteProductButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox CatalogGroupBox;
         private System.Windows.Forms.DataGridView CatalogDataGridView;
@@ -545,10 +586,10 @@
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.Button AddToCartButton;
         private System.Windows.Forms.Label TotalSumLabel;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button DeleteToCartButton;
         private System.Windows.Forms.Label lblTotalSum;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView CartDataGridView;
+        private System.Windows.Forms.Button GenerateRepButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker EndDateTimePicker;
