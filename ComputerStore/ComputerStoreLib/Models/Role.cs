@@ -10,5 +10,5 @@ namespace ComputerStoreLib.Models
     {
         Admin,
         Seller
-    }
+    } 
 }
