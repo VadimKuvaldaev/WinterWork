@@ -10,6 +10,7 @@ namespace ComputerStoreLib.Models
 {
     public class Sale : INotifyPropertyChanged
     {
+        // Приватные поля для хранения данных
         private int id_;
         private int userId_;
         private string userName_;
@@ -17,6 +18,9 @@ namespace ComputerStoreLib.Models
         private decimal totalAmount_;
         private BindingList<SaleItem> items_ = new BindingList<SaleItem>();
 
+        /// <summary>
+        /// Уникальный идентификатор продажи
+        /// </summary>
         [DisplayName("ID продажи")]
         public int Id
         {
@@ -28,6 +32,9 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        /// <summary>
+        /// ID пользователя, который оформил продажу
+        /// </summary>
         [DisplayName("ID пользователя")]
         public int UserId
         {
@@ -39,6 +46,9 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        /// <summary>
+        /// Имя продавца, оформившего продажу
+        /// </summary>
         [DisplayName("Продавец")]
         public string UserName
         {
@@ -50,6 +60,9 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        /// <summary>
+        /// Дата и время оформления продажи
+        /// </summary>
         [DisplayName("Дата продажи")]
         public DateTime SaleDate
         {
@@ -61,6 +74,9 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        /// <summary>
+        /// Общая сумма продажи
+        /// </summary>
         [DisplayName("Итоговая сумма")]
         public decimal TotalAmount
         {
@@ -72,6 +88,9 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        /// <summary>
+        /// Список товаров в продаже (позиции чека)
+        /// </summary>
         [DisplayName("Товары")]
         public BindingList<SaleItem> Items
         {
@@ -83,18 +102,28 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        // Событие для уведомления об изменении свойств
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Вызов события изменения свойства
+        /// </summary>
+        /// <param name="prop">Имя измененного свойства</param>
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
 
+        /// <summary>
+        /// Конструктор продажи
+        /// </summary>
         public Sale()
         {
             Items = new BindingList<SaleItem>();
-            SaleDate = DateTime.Now;
+            SaleDate = DateTime.Now; // Автоматически устанавливаем текущую дату
         }
     }
 }
+
+    

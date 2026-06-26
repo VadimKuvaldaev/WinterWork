@@ -17,10 +17,18 @@ namespace ComputerStore
 {
     public partial class MainForm : Form
     {
+        // Загрузчик данных из базы PostgreSQL
         private PgComputerStoreLoader loader_;
+        // Текущий авторизованный пользователь
         private User currentUser_;
+        // Корзина для товаров
         private Cart cart_ = new Cart();
 
+        /// <summary>
+        /// Конструктор главной формы
+        /// </summary>
+        /// <param name="loader">Загрузчик данных из БД</param>
+        /// <param name="currentUser">Авторизованный пользователь</param>
         public MainForm(PgComputerStoreLoader loader, User currentUser)
         {
             InitializeComponent();
@@ -33,9 +41,14 @@ namespace ComputerStore
             ConfigureCharts();
         }
 
+        // ==================== НАСТРОЙКА ТАБЛИЦ ====================
+
+        /// <summary>
+        /// Настройка всех DataGridView на форме
+        /// </summary>
         private void ConfigureDataGridViews()
         {
-            // ===== ProductsForSaleDataGridView (Каталог) =====
+            // ===== ProductsForSaleDataGridView (Каталог для продаж) =====
             ProductsForSaleDataGridView.AutoGenerateColumns = false;
             ProductsForSaleDataGridView.Columns.Clear();
             ProductsForSaleDataGridView.Columns.AddRange(new DataGridViewColumn[]
@@ -143,12 +156,16 @@ namespace ComputerStore
             ProductsDataGridView.CellFormatting += ProductsDataGridView_CellFormatting;
             ProductsForSaleDataGridView.CellFormatting += ProductsForSaleDataGridView_CellFormatting;
 
+            // Настройка выделения строк
             ProductsForSaleDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CartDataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         // ==================== ПОДСВЕТКА ТОВАРОВ ====================
 
+        /// <summary>
+        /// Обработчик форматирования ячеек на складе
+        /// </summary>
         private void ProductsDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -160,6 +177,9 @@ namespace ComputerStore
             }
         }
 
+        /// <summary>
+        /// Обработчик форматирования ячеек в каталоге
+        /// </summary>
         private void ProductsForSaleDataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -171,10 +191,16 @@ namespace ComputerStore
             }
         }
 
+        /// <summary>
+        /// Подсветка строки в зависимости от количества товара
+        /// </summary>
+        /// <param name="row">Строка таблицы</param>
+        /// <param name="quantity">Количество товара</param>
         private void HighlightProductRow(DataGridViewRow row, int quantity)
         {
             if (quantity == 0)
             {
+                // Красный - товар отсутствует на складе
                 row.DefaultCellStyle.BackColor = Color.LightCoral;
                 row.DefaultCellStyle.ForeColor = Color.White;
                 row.DefaultCellStyle.SelectionBackColor = Color.Red;
@@ -182,6 +208,7 @@ namespace ComputerStore
             }
             else if (quantity <= 5)
             {
+                // Желтый - критический остаток (1-5 шт.)
                 row.DefaultCellStyle.BackColor = Color.LightYellow;
                 row.DefaultCellStyle.ForeColor = Color.Black;
                 row.DefaultCellStyle.SelectionBackColor = Color.Gold;
@@ -189,6 +216,7 @@ namespace ComputerStore
             }
             else
             {
+                // Белый - нормальный остаток (> 5 шт.)
                 row.DefaultCellStyle.BackColor = Color.White;
                 row.DefaultCellStyle.ForeColor = Color.Black;
                 row.DefaultCellStyle.SelectionBackColor = Color.LightBlue;
@@ -198,8 +226,12 @@ namespace ComputerStore
 
         // ==================== НАСТРОЙКА ГРАФИКОВ ====================
 
+        /// <summary>
+        /// Настройка графиков (CartesianChart и PieChart)
+        /// </summary>
         private void ConfigureCharts()
         {
+            // Настройка линейного графика (динамика продаж)
             cartesianChart1.Series = new SeriesCollection();
             cartesianChart1.AxisX.Clear();
             cartesianChart1.AxisX.Add(new Axis
@@ -216,6 +248,7 @@ namespace ComputerStore
             });
             cartesianChart1.LegendLocation = LegendLocation.Top;
 
+            // Настройка круговой диаграммы (распределение по категориям)
             pieChart1.Series = new SeriesCollection();
             pieChart1.InnerRadius = 50;
             pieChart1.LegendLocation = LegendLocation.Right;
@@ -223,6 +256,11 @@ namespace ComputerStore
 
         // ==================== ОБНОВЛЕНИЕ ГРАФИКОВ ====================
 
+        /// <summary>
+        /// Обновляет графики на вкладке "Отчеты"
+        /// </summary>
+        /// <param name="startDate">Начальная дата</param>
+        /// <param name="endDate">Конечная дата</param>
         private void UpdateCharts(DateTime startDate, DateTime endDate)
         {
             try
@@ -236,6 +274,7 @@ namespace ComputerStore
                     return;
                 }
 
+                // Фильтруем продажи по дате
                 var filteredSales = sales.Where(s => s.SaleDate >= startDate && s.SaleDate <= endDate).ToList();
 
                 if (filteredSales.Count == 0)
@@ -246,6 +285,7 @@ namespace ComputerStore
                     return;
                 }
 
+                // ===== CartesianChart - Динамика продаж по дням =====
                 var dailySales = filteredSales
                     .GroupBy(s => s.SaleDate.Date)
                     .OrderBy(g => g.Key)
@@ -274,11 +314,11 @@ namespace ComputerStore
                         Values = chartValues,
                         PointGeometrySize = 12,
                         PointForeground = new System.Windows.Media.SolidColorBrush(
-                            System.Windows.Media.Color.FromRgb(231, 76, 60)
+                            System.Windows.Media.Color.FromRgb(231, 76, 60) // Красный цвет точек
                         ),
                         Fill = System.Windows.Media.Brushes.Transparent,
                         Stroke = new System.Windows.Media.SolidColorBrush(
-                            System.Windows.Media.Color.FromRgb(46, 204, 113)
+                            System.Windows.Media.Color.FromRgb(46, 204, 113) // Зеленый цвет линии
                         ),
                         StrokeThickness = 3,
                         LineSmoothness = 0.5
@@ -286,6 +326,7 @@ namespace ComputerStore
 
                     cartesianChart1.Series.Add(lineSeries);
 
+                    // Настройка оси X
                     cartesianChart1.AxisX.Clear();
                     cartesianChart1.AxisX.Add(new Axis
                     {
@@ -295,6 +336,7 @@ namespace ComputerStore
                         Separator = new Separator { Step = 1 }
                     });
 
+                    // Настройка оси Y
                     cartesianChart1.AxisY.Clear();
                     cartesianChart1.AxisY.Add(new Axis
                     {
@@ -303,6 +345,7 @@ namespace ComputerStore
                     });
                 }
 
+                // ===== PieChart - Распределение продаж по категориям =====
                 var categorySales = new Dictionary<string, decimal>();
                 foreach (var sale in filteredSales)
                 {
@@ -322,16 +365,17 @@ namespace ComputerStore
 
                 if (categorySales.Count > 0)
                 {
+                    // Цвета для секторов диаграммы
                     var colors = new[]
                     {
-                        System.Windows.Media.Color.FromRgb(231, 76, 60),
-                        System.Windows.Media.Color.FromRgb(46, 204, 113),
-                        System.Windows.Media.Color.FromRgb(52, 152, 219),
-                        System.Windows.Media.Color.FromRgb(241, 196, 15),
-                        System.Windows.Media.Color.FromRgb(155, 89, 182),
-                        System.Windows.Media.Color.FromRgb(26, 188, 156),
-                        System.Windows.Media.Color.FromRgb(230, 126, 34),
-                        System.Windows.Media.Color.FromRgb(149, 165, 166)
+                        System.Windows.Media.Color.FromRgb(231, 76, 60),   // Красный
+                        System.Windows.Media.Color.FromRgb(46, 204, 113),   // Зеленый
+                        System.Windows.Media.Color.FromRgb(52, 152, 219),   // Синий
+                        System.Windows.Media.Color.FromRgb(241, 196, 15),   // Желтый
+                        System.Windows.Media.Color.FromRgb(155, 89, 182),   // Фиолетовый
+                        System.Windows.Media.Color.FromRgb(26, 188, 156),   // Бирюзовый
+                        System.Windows.Media.Color.FromRgb(230, 126, 34),   // Оранжевый
+                        System.Windows.Media.Color.FromRgb(149, 165, 166)   // Серый
                     };
 
                     int colorIndex = 0;
@@ -359,6 +403,7 @@ namespace ComputerStore
                 }
                 else
                 {
+                    // Если нет данных - показываем заглушку
                     pieChart1.Series.Add(new PieSeries
                     {
                         Title = "Нет данных",
@@ -375,6 +420,10 @@ namespace ComputerStore
             }
         }
 
+        /// <summary>
+        /// Показывает сообщение "Нет данных" на графике
+        /// </summary>
+        /// <param name="message">Текст сообщения</param>
         private void ShowNoDataMessage(string message)
         {
             cartesianChart1.Series.Add(new LineSeries
@@ -390,12 +439,16 @@ namespace ComputerStore
 
         // ==================== ЗАГРУЗКА ДАННЫХ ====================
 
+        /// <summary>
+        /// Загрузка всех данных при открытии формы
+        /// </summary>
         private void LoadData()
         {
             try
             {
                 var products = loader_.LoadProducts();
 
+                // Если в БД нет товаров - показываем тестовые данные
                 if (products == null || products.Count == 0)
                 {
                     var testData = new List<ProductItem>
@@ -415,6 +468,7 @@ namespace ComputerStore
                     return;
                 }
 
+                // Отображаем товары
                 ProductsForSaleDataGridView.DataSource = products;
                 ProductsDataGridView.DataSource = products;
                 ProductCountLabel.Text = $"Всего товаров: {products.Count}";
@@ -429,11 +483,16 @@ namespace ComputerStore
 
         // ==================== НАСТРОЙКА UI ====================
 
+        /// <summary>
+        /// Настройка пользовательского интерфейса
+        /// </summary>
         private void SetupUI()
         {
+            // Отображение информации о пользователе
             UserInfoLabel.Text = $"Пользователь: {currentUser_.FullName ?? currentUser_.Login}";
             UserRoleLabel.Text = $"Роль: {currentUser_.RoleDisplayName}";
 
+            // Настройка доступа для продавца
             if (currentUser_.Role == Role.Seller)
             {
                 AddProductButton.Visible = false;
@@ -442,7 +501,8 @@ namespace ComputerStore
                 ReportsTabPage.Visible = false;
             }
 
-            // ---- БЕЗОПАСНАЯ ПОДПИСКА НА СОБЫТИЯ (сначала отписываемся) ----
+            // ---- БЕЗОПАСНАЯ ПОДПИСКА НА СОБЫТИЯ ----
+            // Сначала отписываемся, чтобы избежать двойной подписки
             LogoutButton.Click -= (s, e) => { };
             LogoutButton.Click += (s, e) =>
             {
@@ -482,6 +542,9 @@ namespace ComputerStore
             LoadSales();
         }
 
+        /// <summary>
+        /// Загрузка категорий товаров в выпадающий список
+        /// </summary>
         private void LoadCategories()
         {
             try
@@ -500,6 +563,9 @@ namespace ComputerStore
             catch { }
         }
 
+        /// <summary>
+        /// Фильтрация товаров по поисковому запросу и категории
+        /// </summary>
         private void FilterProducts()
         {
             try
@@ -509,10 +575,12 @@ namespace ComputerStore
 
                 var filtered = products.AsEnumerable();
 
+                // Фильтр по названию
                 string search = SearchTextBox.Text.Trim();
                 if (!string.IsNullOrEmpty(search))
                     filtered = filtered.Where(p => p.Name.ToLower().Contains(search.ToLower()));
 
+                // Фильтр по категории
                 if (CategoryFilterComboBox.SelectedIndex > 0)
                 {
                     string category = CategoryFilterComboBox.SelectedItem.ToString();
@@ -527,6 +595,9 @@ namespace ComputerStore
             catch { }
         }
 
+        /// <summary>
+        /// Обновление отображения корзины
+        /// </summary>
         private void UpdateCartDisplay()
         {
             CartDataGridView.DataSource = null;
@@ -538,7 +609,12 @@ namespace ComputerStore
 
         // ==================== ВСПОМОГАТЕЛЬНЫЕ МЕТОДЫ ДЛЯ РАБОТЫ СО СКЛАДОМ ====================
 
-        // Метод для списания товара со склада при добавлении в корзину
+        /// <summary>
+        /// Списание товара со склада при добавлении в корзину
+        /// </summary>
+        /// <param name="productId">ID товара</param>
+        /// <param name="quantity">Количество для списания</param>
+        /// <returns>True - успешно, False - ошибка</returns>
         private bool ReserveProductFromStock(int productId, int quantity)
         {
             var product = loader_.LoadProducts().FirstOrDefault(p => p.Id == productId);
@@ -561,7 +637,11 @@ namespace ComputerStore
             return true;
         }
 
-        // Метод для возврата товара на склад при удалении из корзины
+        /// <summary>
+        /// Возврат товара на склад при удалении из корзины
+        /// </summary>
+        /// <param name="productId">ID товара</param>
+        /// <param name="quantity">Количество для возврата</param>
         private void ReturnProductToStock(int productId, int quantity)
         {
             var product = loader_.LoadProducts().FirstOrDefault(p => p.Id == productId);
@@ -578,6 +658,9 @@ namespace ComputerStore
 
         // ==================== КНОПКИ КОРЗИНЫ ====================
 
+        /// <summary>
+        /// Обработчик кнопки "Добавить в корзину"
+        /// </summary>
         private void AddToCartButton_Click(object sender, EventArgs e)
         {
             if (ProductsForSaleDataGridView.SelectedRows.Count == 0)
@@ -609,7 +692,7 @@ namespace ComputerStore
                 if (!ReserveProductFromStock(product.Id, quantity))
                     return;
 
-                // Добавляем в корзину (уже без проверки остатка)
+                // Добавляем в корзину
                 cart_.AddItem(product, quantity);
 
                 // Обновляем отображение склада
@@ -628,6 +711,9 @@ namespace ComputerStore
             }
         }
 
+        /// <summary>
+        /// Обработчик кнопки "Удалить из корзины"
+        /// </summary>
         private void RemoveFromCartButton_Click(object sender, EventArgs e)
         {
             if (CartDataGridView.SelectedRows.Count == 0)
@@ -732,6 +818,9 @@ namespace ComputerStore
             }
         }
 
+        /// <summary>
+        /// Обработчик кнопки "Оформить продажу"
+        /// </summary>
         private void CheckoutButton_Click(object sender, EventArgs e)
         {
             if (cart_.IsEmpty)
@@ -750,7 +839,7 @@ namespace ComputerStore
                     Items = new BindingList<SaleItem>()
                 };
 
-                // Проверяем все товары в корзине (остатки уже должны быть зарезервированы)
+                // Проверяем все товары в корзине
                 foreach (var cartItem in cart_.Items)
                 {
                     var product = loader_.LoadProducts().FirstOrDefault(p => p.Id == cartItem.Product.Id);
@@ -760,7 +849,8 @@ namespace ComputerStore
                         return;
                     }
 
-                    // Товар уже списан при добавлении в корзину, проверяем что остаток достаточен
+                    // Товар уже списан при добавлении в корзину
+                    // Проверяем, что остаток не отрицательный
                     if (product.Quantity < 0)
                     {
                         MessageBox.Show($"Ошибка: отрицательный остаток товара '{product.Name}'", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -780,6 +870,7 @@ namespace ComputerStore
                     sale.TotalAmount += cartItem.TotalPrice;
                 }
 
+                // Сохраняем продажу в БД
                 if (loader_.AddSale(sale))
                 {
                     cart_.Clear();
@@ -796,6 +887,9 @@ namespace ComputerStore
 
         // ==================== МЕТОДЫ ДЛЯ СКЛАДА ====================
 
+        /// <summary>
+        /// Загрузка и отображение товаров на складе
+        /// </summary>
         private void LoadInventory()
         {
             string searchTerm = SearchTextBox.Text.Trim();
@@ -822,12 +916,18 @@ namespace ComputerStore
             }
         }
 
+        /// <summary>
+        /// Обработчик кнопки "Обновить"
+        /// </summary>
         private void RefreshButton_Click(object sender, EventArgs e)
         {
             LoadInventory();
             LoadSales();
         }
 
+        /// <summary>
+        /// Обработчик кнопки "Добавить товар"
+        /// </summary>
         private void AddProductButton_Click(object sender, EventArgs e)
         {
             ProductEditForm editForm = new ProductEditForm(null, loader_);
@@ -839,6 +939,9 @@ namespace ComputerStore
             }
         }
 
+        /// <summary>
+        /// Обработчик кнопки "Редактировать товар"
+        /// </summary>
         private void EditProductButton_Click(object sender, EventArgs e)
         {
             if (ProductsDataGridView.SelectedRows.Count == 0)
@@ -861,6 +964,9 @@ namespace ComputerStore
             }
         }
 
+        /// <summary>
+        /// Обработчик кнопки "Удалить товар"
+        /// </summary>
         private void DeleteProductButton_Click(object sender, EventArgs e)
         {
             if (ProductsDataGridView.SelectedRows.Count == 0)
@@ -894,6 +1000,9 @@ namespace ComputerStore
 
         // ==================== МЕТОДЫ ДЛЯ ОТЧЕТОВ ====================
 
+        /// <summary>
+        /// Загрузка и отображение продаж в отчетах
+        /// </summary>
         private void LoadSales()
         {
             try
@@ -908,6 +1017,7 @@ namespace ComputerStore
                     decimal totalRevenue = loader_.GetTotalRevenue();
                     TotalRevenueLabel.Text = $"Общая выручка: {totalRevenue:C}";
 
+                    // Обновляем графики при загрузке
                     if (sales.Count > 0)
                     {
                         var minDate = sales.Min(s => s.SaleDate);
@@ -922,6 +1032,9 @@ namespace ComputerStore
             }
         }
 
+        /// <summary>
+        /// Обработчик кнопки "Сформировать отчет"
+        /// </summary>
         private void GenerateReportButton_Click(object sender, EventArgs e)
         {
             try
@@ -943,6 +1056,7 @@ namespace ComputerStore
                     return;
                 }
 
+                // Фильтруем продажи по дате
                 var filteredSales = sales.Where(s => s.SaleDate >= startDate && s.SaleDate <= endDate).ToList();
 
                 if (filteredSales.Count == 0)
@@ -956,6 +1070,7 @@ namespace ComputerStore
                     return;
                 }
 
+                // Обновляем таблицу
                 SalesDataGridView.DataSource = null;
                 SalesDataGridView.DataSource = filteredSales;
                 SalesCountLabel.Text = $"Всего продаж: {filteredSales.Count}";
@@ -963,6 +1078,7 @@ namespace ComputerStore
                 decimal totalRevenue = filteredSales.Sum(s => s.TotalAmount);
                 TotalRevenueLabel.Text = $"Общая выручка: {totalRevenue:C}";
 
+                // Обновляем графики
                 UpdateCharts(startDate, endDate);
 
                 MessageBox.Show($"Отчет сформирован!\nПродаж: {filteredSales.Count}\nВыручка: {totalRevenue:C}", "Готово", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -10,6 +10,7 @@ namespace ComputerStoreLib.Models
 {
     public class SaleItem : INotifyPropertyChanged
     {
+        // Приватные поля для хранения данных
         private int productId_;
         private string productName_;
         private string category_;
@@ -17,6 +18,9 @@ namespace ComputerStoreLib.Models
         private int quantity_;
         private decimal totalPrice_;
 
+        /// <summary>
+        /// Уникальный идентификатор товара
+        /// </summary>
         [DisplayName("ID товара")]
         public int ProductId
         {
@@ -28,6 +32,9 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        /// <summary>
+        /// Наименование товара
+        /// </summary>
         [DisplayName("Наименование")]
         public string ProductName
         {
@@ -39,6 +46,9 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        /// <summary>
+        /// Категория товара (Процессоры, Видеокарты и т.д.)
+        /// </summary>
         [DisplayName("Категория")]
         public string Category
         {
@@ -50,6 +60,9 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        /// <summary>
+        /// Цена товара на момент продажи
+        /// </summary>
         [DisplayName("Цена")]
         public decimal Price
         {
@@ -61,6 +74,9 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        /// <summary>
+        /// Количество товара
+        /// </summary>
         [DisplayName("Количество")]
         public int Quantity
         {
@@ -69,10 +85,13 @@ namespace ComputerStoreLib.Models
             {
                 quantity_ = value;
                 OnPropertyChanged("Quantity");
-                OnPropertyChanged("TotalPrice");
+                OnPropertyChanged("TotalPrice"); // Пересчитываем итоговую сумму
             }
         }
 
+        /// <summary>
+        /// Итоговая сумма по позиции (Цена × Количество)
+        /// </summary>
         [DisplayName("Итого")]
         public decimal TotalPrice
         {
@@ -84,12 +103,26 @@ namespace ComputerStoreLib.Models
             }
         }
 
+        // Событие для уведомления об изменении свойств
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// Вызов события изменения свойства
+        /// </summary>
+        /// <param name="prop">Имя измененного свойства</param>
         public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
+        }
+
+        /// <summary>
+        /// Строковое представление позиции продажи
+        /// </summary>
+        /// <returns>Наименование - Количество шт. х Цена = Итого</returns>
+        public override string ToString()
+        {
+            return $"{ProductName} - {Quantity} шт. x {Price:C} = {TotalPrice:C}";
         }
     }
 }
