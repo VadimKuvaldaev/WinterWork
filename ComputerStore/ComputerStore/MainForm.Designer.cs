@@ -239,6 +239,7 @@
             this.LogoutButton.TabIndex = 3;
             this.LogoutButton.Text = "Выход";
             this.LogoutButton.UseVisualStyleBackColor = false;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // MainTabControl
             // 
@@ -263,7 +264,7 @@
             this.InventoryTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.InventoryTabPage.Size = new System.Drawing.Size(1192, 600);
             this.InventoryTabPage.TabIndex = 0;
-            this.InventoryTabPage.Text = "📦 Склад";
+            this.InventoryTabPage.Text = "Склад";
             // 
             // ProductsDataGridView
             // 
@@ -312,6 +313,7 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(180, 25);
             this.SearchTextBox.TabIndex = 1;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // CategoryFilterLabel
             // 
@@ -329,6 +331,7 @@
             this.CategoryFilterComboBox.Name = "CategoryFilterComboBox";
             this.CategoryFilterComboBox.Size = new System.Drawing.Size(150, 25);
             this.CategoryFilterComboBox.TabIndex = 3;
+            this.CategoryFilterComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryFilterComboBox_SelectedIndexChanged);
             // 
             // RefreshButton
             // 
@@ -360,7 +363,7 @@
             // 
             this.EditProductButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(196)))), ((int)(((byte)(15)))));
             this.EditProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditProductButton.ForeColor = System.Drawing.Color.Black;
+            this.EditProductButton.ForeColor = System.Drawing.Color.Transparent;
             this.EditProductButton.Location = new System.Drawing.Point(790, 10);
             this.EditProductButton.Name = "EditProductButton";
             this.EditProductButton.Size = new System.Drawing.Size(120, 30);
@@ -401,7 +404,7 @@
             this.SalesTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.SalesTabPage.Size = new System.Drawing.Size(1192, 600);
             this.SalesTabPage.TabIndex = 1;
-            this.SalesTabPage.Text = "🛒 Продажи";
+            this.SalesTabPage.Text = "Продажи";
             // 
             // SalesSplitContainer
             // 
@@ -620,19 +623,21 @@
             this.ClearCartButton.TabIndex = 3;
             this.ClearCartButton.Text = "Очистить корзину";
             this.ClearCartButton.UseVisualStyleBackColor = false;
+            this.ClearCartButton.Click += new System.EventHandler(this.ClearCartButton_Click);
             // 
             // CheckoutButton
             // 
             this.CheckoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
             this.CheckoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheckoutButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.CheckoutButton.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.CheckoutButton.ForeColor = System.Drawing.Color.White;
-            this.CheckoutButton.Location = new System.Drawing.Point(400, 25);
+            this.CheckoutButton.Location = new System.Drawing.Point(401, 34);
             this.CheckoutButton.Name = "CheckoutButton";
-            this.CheckoutButton.Size = new System.Drawing.Size(160, 50);
+            this.CheckoutButton.Size = new System.Drawing.Size(151, 33);
             this.CheckoutButton.TabIndex = 4;
             this.CheckoutButton.Text = "Оформить продажу";
             this.CheckoutButton.UseVisualStyleBackColor = false;
+            this.CheckoutButton.Click += new System.EventHandler(this.CheckoutButton_Click);
             // 
             // ReportsTabPage
             // 
@@ -645,7 +650,7 @@
             this.ReportsTabPage.Name = "ReportsTabPage";
             this.ReportsTabPage.Size = new System.Drawing.Size(1192, 600);
             this.ReportsTabPage.TabIndex = 2;
-            this.ReportsTabPage.Text = "📊 Отчеты";
+            this.ReportsTabPage.Text = "Отчеты";
             // 
             // ReportsSplitContainer
             // 
@@ -716,9 +721,9 @@
             this.ChartTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.ChartTitleLabel.Location = new System.Drawing.Point(3, 3);
             this.ChartTitleLabel.Name = "ChartTitleLabel";
-            this.ChartTitleLabel.Size = new System.Drawing.Size(170, 20);
+            this.ChartTitleLabel.Size = new System.Drawing.Size(145, 20);
             this.ChartTitleLabel.TabIndex = 0;
-            this.ChartTitleLabel.Text = "📈 Динамика продаж";
+            this.ChartTitleLabel.Text = "Динамика продаж";
             // 
             // ChartRightPanel
             // 
@@ -754,9 +759,9 @@
             this.PieTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
             this.PieTitleLabel.Location = new System.Drawing.Point(3, 3);
             this.PieTitleLabel.Name = "PieTitleLabel";
-            this.PieTitleLabel.Size = new System.Drawing.Size(317, 20);
+            this.PieTitleLabel.Size = new System.Drawing.Size(291, 20);
             this.PieTitleLabel.TabIndex = 0;
-            this.PieTitleLabel.Text = "🍩 Распределение продаж по категориям";
+            this.PieTitleLabel.Text = "Распределение продаж по категориям";
             // 
             // SalesDataGridView
             // 
