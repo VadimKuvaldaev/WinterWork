@@ -104,13 +104,6 @@ namespace ComputerStore
             {
                 allProducts_ = loader_.LoadProducts()?.ToList() ?? new List<ProductItem>();
 
-                // Если в БД нет товаров - показываем тестовые данные
-                if (allProducts_.Count == 0)
-                {
-                    LoadTestData();
-                    return;
-                }
-
                 // Отображаем товары
                 DisplayProducts(allProducts_);
                 ProductCountLabel.Text = $"Всего товаров: {allProducts_.Count}";
@@ -130,25 +123,7 @@ namespace ComputerStore
             }
         }
 
-        private void LoadTestData()
-        {
-            allProducts_ = new List<ProductItem>
-            {
-                new ProductItem { Id = 1, Name = "Intel Core i9-13900K", Category = "Процессоры", Price = 85000, Quantity = 10 },
-                new ProductItem { Id = 2, Name = "NVIDIA RTX 4090", Category = "Видеокарты", Price = 180000, Quantity = 5 },
-                new ProductItem { Id = 3, Name = "AMD Ryzen 9 7950X", Category = "Процессоры", Price = 75000, Quantity = 8 },
-                new ProductItem { Id = 4, Name = "AMD Radeon RX 7900 XTX", Category = "Видеокарты", Price = 120000, Quantity = 3 },
-                new ProductItem { Id = 5, Name = "Kingston DDR5 32GB", Category = "Оперативная память", Price = 35000, Quantity = 20 },
-                new ProductItem { Id = 6, Name = "Samsung 990 PRO 2TB", Category = "Накопители SSD", Price = 45000, Quantity = 15 },
-                new ProductItem { Id = 7, Name = "ASUS ROG Maximus Z790", Category = "Материнские платы", Price = 65000, Quantity = 6 },
-            };
-
-            DisplayProducts(allProducts_);
-            ProductCountLabel.Text = $"Всего товаров: {allProducts_.Count} (тестовые)";
-
-            LoadCategories();
-            cartManager_?.UpdateDisplay();
-        }
+        
 
         private void DisplayProducts(List<ProductItem> products)
         {
