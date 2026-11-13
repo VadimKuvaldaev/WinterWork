@@ -44,12 +44,15 @@
             this.RoleComboBox = new System.Windows.Forms.ComboBox();
             this.CreateButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.HeaderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // HeaderPanel
             // 
             this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.HeaderPanel.Controls.Add(this.logoPictureBox);
             this.HeaderPanel.Controls.Add(this.TitleLabel);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeaderPanel.Location = new System.Drawing.Point(0, 0);
@@ -122,7 +125,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(30, 155);
+            this.PasswordTextBox.Location = new System.Drawing.Point(24, 162);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(380, 25);
             this.PasswordTextBox.TabIndex = 4;
@@ -177,6 +180,16 @@
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.Image = global::ComputerStore.Properties.Resources.logo;
+            this.logoPictureBox.Location = new System.Drawing.Point(24, 8);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.Size = new System.Drawing.Size(49, 45);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPictureBox.TabIndex = 9;
+            this.logoPictureBox.TabStop = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -204,9 +217,12 @@
             this.Text = "Регистрация";
             this.HeaderPanel.ResumeLayout(false);
             this.HeaderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
+
+        private System.Windows.Forms.PictureBox logoPictureBox;
     }
 }

@@ -142,6 +142,7 @@
             this.GenerateReportButton = new System.Windows.Forms.Button();
             this.SalesCountLabel = new System.Windows.Forms.Label();
             this.TotalRevenueLabel = new System.Windows.Forms.Label();
+            this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.HeaderPanel.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.InventoryTabPage.SuspendLayout();
@@ -176,11 +177,13 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SalesDataGridView)).BeginInit();
             this.ReportsTopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // HeaderPanel
             // 
             this.HeaderPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.HeaderPanel.Controls.Add(this.logoPictureBox);
             this.HeaderPanel.Controls.Add(this.TitleLabel);
             this.HeaderPanel.Controls.Add(this.UserInfoLabel);
             this.HeaderPanel.Controls.Add(this.UserRoleLabel);
@@ -196,7 +199,7 @@
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.TitleLabel.ForeColor = System.Drawing.Color.White;
-            this.TitleLabel.Location = new System.Drawing.Point(20, 22);
+            this.TitleLabel.Location = new System.Drawing.Point(69, 22);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(391, 25);
             this.TitleLabel.TabIndex = 0;
@@ -857,6 +860,16 @@
             this.TotalRevenueLabel.TabIndex = 3;
             this.TotalRevenueLabel.Text = "Общая выручка: 0 ₽";
             // 
+            // logoPictureBox
+            // 
+            this.logoPictureBox.Image = global::ComputerStore.Properties.Resources.logo;
+            this.logoPictureBox.Location = new System.Drawing.Point(13, 12);
+            this.logoPictureBox.Name = "logoPictureBox";
+            this.logoPictureBox.Size = new System.Drawing.Size(49, 45);
+            this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoPictureBox.TabIndex = 9;
+            this.logoPictureBox.TabStop = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -914,11 +927,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.SalesDataGridView)).EndInit();
             this.ReportsTopPanel.ResumeLayout(false);
             this.ReportsTopPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox logoPictureBox;
     }
 }
